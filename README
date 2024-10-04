@@ -1,0 +1,65 @@
+//Enache ALexia-Ioana, 321CA
+
+1. infinite_product
+   "convert_from_base8" is an auxiliar function used to convert a number from
+   base 8 to decimal. It iterates through each digit of thr base 8 number,
+   converting it to deimal and acumulating the result.
+   The main funtion iterates through the pairs of vector coordinates, converts
+   them to decimal, and calculates the product, maximum values and norms. In the
+   end the result are printed.
+
+2. codevim
+   The code defines a structure called "subject" that holds information about
+   a subject: its grade and the number of credits
+   There is an auxilar function called "bubble_sort" that performs bubble_sort
+   in descending order. This function is used to sort and arrey of credits that
+   can be added to the total.
+   In the main function the number of total credits is calculated by
+   multiplying the grade and credits for each subject. If the initial total is
+   already greater that or equal to the minimum required(p_min) the code prints
+   '0'. The program sorts the array of credits (w) in descending order using
+   bubble_sort. It uses a loop to attempt to change the least number of grades
+   while achieving the required total credits: Starting with the subjects that
+   can provide the most credits, it checks if adding their credits will bring
+   the total closer to the required minimum. If by adding those credits it does
+   not exceed the minimum, it updates the total credits and increments the count
+   of subjects that need improvement. The loop continues until the required total
+   is achieved or no further improvement is possible. If it is not possible to
+   achieve the required total credits with the given constraints, the code prints
+   "-1" to indicate that there is no solution. If a solution is found, it prints
+   the number of subjects that need to be improved to meet the minimum credit
+   requirement.
+
+3. gigel_and_the_checkboard
+   The program uses a while loop to traverse the matrix indefinitely until
+   a specific condition is met. The program marks the current cell as visited
+   by setting v[i][j] to 1. Based on the color of the current square (whether
+   it is white or black), the program determines the direction of movement for
+   the next step. If x is positive, the program moves right (if the square is
+   white) or down (if the square is black). If x is negative, it moves left
+   (if the square is white) or up (if the square is black). The loop continues
+   until the program detects that the current cell has been visited before
+   (indicated by v[i][j] == 1). This condition ensures that the traversal ends
+   when the program revisits a cell.
+   After the traversal ends, the program prints the result d. It also
+   calculates and prints the final position as (n - i) in the first dimension
+   and as a character in the second dimension (e.g., "A" for 0, "B" for 1, and
+   so on). If the second dimension index is greater than or equal to 26, it
+   calculates and prints the character using the alphabet (e.g., "AA" for 26,
+   "AB" for 27, and so on).
+
+4. nomogram
+   The program begins by defining two functions: check_line and check_column.
+   These functions are used to verify if a given row or column complies with the
+   provided sequences of ones. They return 1 if the row or column is correct, or
+   0 if it is not. The program reads the number of test cases (t), where each test
+   case consists of a matrix, sequences of ones for rows and columns, and the
+   matrix itself. It loops through each test case. For each test case, the program
+   reads and parses the sequences of ones for rows and columns. These sequences
+   are stored in an array seq[]. The program performs the following steps for each
+   test case:
+   -Verifies the correctness of rows by calling check_line for each row.
+   -If a row is incorrect, it prints "Eroare" and moves to the next test case.
+   -Verifies the correctness of columns by calling check_column for each column.
+   -If a column is incorrect, it prints "Eroare" and moves to the next test case.
+   -If both rows and columns are correct, it prints "Corect."
